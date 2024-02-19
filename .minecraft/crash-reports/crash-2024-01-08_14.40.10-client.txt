@@ -1,0 +1,305 @@
+---- Minecraft Crash Report ----
+// You should try our sister game, Minceraft!
+
+Time: 2024-01-08 14:40:10
+Description: Unexpected error
+
+java.lang.IncompatibleClassChangeError: class com.minelittlepony.common.client.gui.element.Button overrides final method net.minecraft.class_339.method_25394(Lnet/minecraft/class_332;IIF)V
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1012)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.defineClassFwd(KnotClassLoader.java:160)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.tryLoadClass(KnotClassDelegate.java:355)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.loadClass(KnotClassDelegate.java:218)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:119)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1012)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.defineClassFwd(KnotClassLoader.java:160)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.tryLoadClass(KnotClassDelegate.java:355)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.loadClass(KnotClassDelegate.java:218)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:119)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at eu.ha3.presencefootsteps.PFOptionsScreen.rebuildContent(PFOptionsScreen.java:59)
+	at com.minelittlepony.common.client.gui.ScrollContainer.init(ScrollContainer.java:78)
+	at eu.ha3.presencefootsteps.PFOptionsScreen.method_25426(PFOptionsScreen.java:44)
+	at net.minecraft.class_437.method_25423(class_437.java:298)
+	at net.minecraft.class_310.method_1507(class_310.java:1187)
+	at eu.ha3.presencefootsteps.PresenceFootsteps.lambda$onTick$2(PresenceFootsteps.java:102)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at eu.ha3.presencefootsteps.PresenceFootsteps.onTick(PresenceFootsteps.java:100)
+	at net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents.lambda$static$2(ClientTickEvents.java:43)
+	at net.minecraft.class_310.handler$bfj000$fabric-lifecycle-events-v1$onEndTick(class_310.java:6777)
+	at net.minecraft.class_310.method_1574(class_310.java:2067)
+	at net.minecraft.class_310.method_1523(class_310.java:1289)
+	at net.minecraft.class_310.method_1514(class_310.java:888)
+	at net.minecraft.client.main.Main.main(Main.java:265)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:470)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at org.prismlauncher.launcher.impl.StandardLauncher.launch(StandardLauncher.java:87)
+	at org.prismlauncher.EntryPoint.listen(EntryPoint.java:130)
+	at org.prismlauncher.EntryPoint.main(EntryPoint.java:70)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1012)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.defineClassFwd(KnotClassLoader.java:160)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.tryLoadClass(KnotClassDelegate.java:355)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.loadClass(KnotClassDelegate.java:218)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:119)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1012)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.defineClassFwd(KnotClassLoader.java:160)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.tryLoadClass(KnotClassDelegate.java:355)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.loadClass(KnotClassDelegate.java:218)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:119)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at eu.ha3.presencefootsteps.PFOptionsScreen.rebuildContent(PFOptionsScreen.java:59)
+	at com.minelittlepony.common.client.gui.ScrollContainer.init(ScrollContainer.java:78)
+	at eu.ha3.presencefootsteps.PFOptionsScreen.method_25426(PFOptionsScreen.java:44)
+	at net.minecraft.class_437.method_25423(class_437.java:298)
+	at net.minecraft.class_310.method_1507(class_310.java:1187)
+	at eu.ha3.presencefootsteps.PresenceFootsteps.lambda$onTick$2(PresenceFootsteps.java:102)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at eu.ha3.presencefootsteps.PresenceFootsteps.onTick(PresenceFootsteps.java:100)
+	at net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents.lambda$static$2(ClientTickEvents.java:43)
+	at net.minecraft.class_310.handler$bfj000$fabric-lifecycle-events-v1$onEndTick(class_310.java:6777)
+
+-- Uptime --
+Details:
+	JVM uptime: 276.788s
+	Wall uptime: 265.408s
+	High-res time: 262.920s
+	Client ticks: 5204 ticks / 260.200s
+Stacktrace:
+	at net.minecraft.class_310.method_1587(class_310.java:2564)
+	at net.minecraft.class_310.method_54580(class_310.java:995)
+	at net.minecraft.class_310.method_1514(class_310.java:911)
+	at net.minecraft.client.main.Main.main(Main.java:265)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:470)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at org.prismlauncher.launcher.impl.StandardLauncher.launch(StandardLauncher.java:87)
+	at org.prismlauncher.EntryPoint.listen(EntryPoint.java:130)
+	at org.prismlauncher.EntryPoint.main(EntryPoint.java:70)
+
+-- Affected level --
+Details:
+	All players: 1 total; [class_746['Squawkykaka'/3981, l='ClientLevel', x=7.18, y=10.12, z=-5.41]]
+	Chunk stats: 4096, 705
+	Level dimension: minecraft:56b13c8f-7740-438f-bb91-4db0ec57a041
+	Level spawn location: World: (0,-1,0), Section: (at 0,15,0 in 0,-1,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 302 game time, 302 day time
+	Server brand: Purpur (Velocity)
+	Server type: Non-integrated multiplayer server
+	Tracked entity count: 1
+
+-- Last reload --
+Details:
+	Reload number: 1
+	Reload reason: initial
+	Finished: Yes
+	Packs: vanilla, fabric, presencefootsteps:default_sound_pack
+
+-- System Details --
+Details:
+	Minecraft Version: 1.20.4
+	Minecraft Version ID: 1.20.4
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 17.0.9, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 471481056 bytes (449 MiB) / 826277888 bytes (788 MiB) up to 4294967296 bytes (4096 MiB)
+	CPUs: 12
+	Processor Vendor: GenuineIntel
+	Processor Name: 12th Gen Intel(R) Core(TM) i5-12400
+	Identifier: Intel64 Family 6 Model 151 Stepping 5
+	Microarchitecture: Alder Lake
+	Frequency (GHz): 2.50
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: Intel(R) UHD Graphics 730
+	Graphics card #0 vendor: Intel Corporation (0x8086)
+	Graphics card #0 VRAM (MB): 1024.00
+	Graphics card #0 deviceId: 0x4692
+	Graphics card #0 versionInfo: DriverVersion=31.0.101.4577
+	Graphics card #1 name: NVIDIA GeForce RTX 3060 Ti
+	Graphics card #1 vendor: NVIDIA (0x10de)
+	Graphics card #1 VRAM (MB): 4095.00
+	Graphics card #1 deviceId: 0x2489
+	Graphics card #1 versionInfo: DriverVersion=31.0.15.4584
+	Memory slot #0 capacity (MB): 16384.00
+	Memory slot #0 clockSpeed (GHz): 2.67
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MB): 16384.00
+	Memory slot #1 clockSpeed (GHz): 2.67
+	Memory slot #1 type: DDR4
+	Virtual memory max (MB): 39964.28
+	Virtual memory used (MB): 18623.18
+	Swap memory total (MB): 7424.00
+	Swap memory used (MB): 0.00
+	JVM Flags: 3 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xms512m -Xmx4096m
+	Fabric Mods: 
+		appleskin: AppleSkin 2.5.1+mc1.20.3
+		architectury: Architectury 11.0.9
+		axiom: Axiom 2.1.1
+			com_moulberry_axiomclientapi_axiomclientapi_: axiomclientapi 1.0.0
+		betterf3: BetterF3 9.0.0
+			fabric-resource-loader-v0: Fabric Resource Loader (v0) 0.11.15+78d798af4f
+		c2me: Concurrent Chunk Management Engine 0.2.0+alpha.11.38
+			c2me-base: Concurrent Chunk Management Engine (Base) 0.2.0+alpha.11.38
+			c2me-client-uncapvd: Concurrent Chunk Management Engine (Client/Uncap View Distance) 0.2.0+alpha.11.38
+			c2me-fixes-chunkio-threading-issues: Concurrent Chunk Management Engine (Fixes/Chunk IO/Threading Issues) 0.2.0+alpha.11.38
+			c2me-fixes-general-threading-issues: Concurrent Chunk Management Engine (Fixes/General/Threading Issues) 0.2.0+alpha.11.38
+			c2me-fixes-worldgen-threading-issues: Concurrent Chunk Management Engine (Fixes/WorldGen/Threading Issues) 0.2.0+alpha.11.38
+			c2me-fixes-worldgen-vanilla-bugs: Concurrent Chunk Management Engine (Fixes/WorldGen/Vanilla Bugs) 0.2.0+alpha.11.38
+			c2me-notickvd: Concurrent Chunk Management Engine (No Tick View Distance) 0.2.0+alpha.11.38
+			c2me-opts-allocs: Concurrent Chunk Management Engine (Optimizations/Memory Allocations) 0.2.0+alpha.11.38
+			c2me-opts-chunk-access: Concurrent Chunk Management Engine (Optimizations/Chunk Access) 0.2.0+alpha.11.38
+			c2me-opts-chunkio: Concurrent Chunk Management Engine (Optimizations/Chunk IO) 0.2.0+alpha.11.38
+			c2me-opts-math: Concurrent Chunk Management Engine (Optimizations/Math) 0.2.0+alpha.11.38
+			c2me-opts-scheduling: Concurrent Chunk Management Engine (Optimizations/Scheduling) 0.2.0+alpha.11.38
+			c2me-opts-worldgen-general: Concurrent Chunk Management Engine (Optimizations/General WorldGen) 0.2.0+alpha.11.38
+			c2me-opts-worldgen-vanilla: Concurrent Chunk Management Engine (Optimizations/Vanilla WorldGen) 0.2.0+alpha.11.38
+			c2me-rewrites-chunk-serializer: Concurrent Chunk Management Engine (Rewrites/Chunk Serializer) 0.2.0+alpha.11.38
+			c2me-rewrites-chunkio: Concurrent Chunk Management Engine (Rewrites/Chunk IO) 0.2.0+alpha.11.38
+			c2me-server-utils: Concurrent Chunk Management Engine (Server Utils) 0.2.0+alpha.11.38
+			c2me-threading-chunkio: Concurrent Chunk Management Engine (Threading/WorldGen) 0.2.0+alpha.11.38
+			c2me-threading-lighting: Concurrent Chunk Management Engine (Threading/Lighting) 0.2.0+alpha.11.38
+			c2me-threading-worldgen: Concurrent Chunk Management Engine (Threading/WorldGen) 0.2.0+alpha.11.38
+			com_electronwill_night-config_core: core 3.6.5
+			com_electronwill_night-config_toml: toml 3.6.5
+			com_ibm_async_asyncutil: asyncutil 0.1.0
+			net_objecthunter_exp4j: exp4j 0.4.8
+			org_threadly_threadly: threadly 7.0
+		cloth-config: Cloth Config v13 13.0.121
+			cloth-basic-math: cloth-basic-math 0.6.1
+		continuity: Continuity 3.0.0-beta.4+1.20.2
+		debugify: Debugify 1.20.4+1.0
+		dynamic_fps: Dynamic FPS 3.3.1
+		entityculling: EntityCulling 1.6.3.1
+		fabric-api: Fabric API 0.91.3+1.20.4
+			fabric-api-base: Fabric API Base 0.4.35+78d798af4f
+			fabric-api-lookup-api-v1: Fabric API Lookup API (v1) 1.6.45+78d798af4f
+			fabric-biome-api-v1: Fabric Biome API (v1) 13.0.15+78d798af4f
+			fabric-block-api-v1: Fabric Block API (v1) 1.0.14+78d798af4f
+			fabric-block-view-api-v2: Fabric BlockView API (v2) 1.0.3+78d798af4f
+			fabric-blockrenderlayer-v1: Fabric BlockRenderLayer Registration (v1) 1.1.45+78d798af4f
+			fabric-client-tags-api-v1: Fabric Client Tags 1.1.6+78d798af4f
+			fabric-command-api-v1: Fabric Command API (v1) 1.2.40+f71b366f4f
+			fabric-command-api-v2: Fabric Command API (v2) 2.2.19+78d798af4f
+			fabric-commands-v0: Fabric Commands (v0) 0.2.57+df3654b34f
+			fabric-containers-v0: Fabric Containers (v0) 0.1.81+df3654b34f
+			fabric-content-registries-v0: Fabric Content Registries (v0) 5.0.9+78d798af4f
+			fabric-convention-tags-v1: Fabric Convention Tags 1.5.9+78d798af4f
+			fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 0.2.22+78d798af4f
+			fabric-data-generation-api-v1: Fabric Data Generation API (v1) 13.1.17+78d798af4f
+			fabric-dimensions-v1: Fabric Dimensions API (v1) 2.1.60+78d798af4f
+			fabric-entity-events-v1: Fabric Entity Events (v1) 1.5.28+4ced05924f
+			fabric-events-interaction-v0: Fabric Events Interaction (v0) 0.6.14+78d798af4f
+			fabric-events-lifecycle-v0: Fabric Events Lifecycle (v0) 0.2.71+df3654b34f
+			fabric-game-rule-api-v1: Fabric Game Rule API (v1) 1.0.45+78d798af4f
+			fabric-item-api-v1: Fabric Item API (v1) 2.1.34+78d798af4f
+			fabric-item-group-api-v1: Fabric Item Group API (v1) 4.0.20+78d798af4f
+			fabric-key-binding-api-v1: Fabric Key Binding API (v1) 1.0.40+78d798af4f
+			fabric-keybindings-v0: Fabric Key Bindings (v0) 0.2.38+df3654b34f
+			fabric-lifecycle-events-v1: Fabric Lifecycle Events (v1) 2.2.29+78d798af4f
+			fabric-loot-api-v2: Fabric Loot API (v2) 2.1.4+78d798af4f
+			fabric-message-api-v1: Fabric Message API (v1) 6.0.4+78d798af4f
+			fabric-mining-level-api-v1: Fabric Mining Level API (v1) 2.1.59+78d798af4f
+			fabric-model-loading-api-v1: Fabric Model Loading API (v1) 1.0.7+78d798af4f
+			fabric-models-v0: Fabric Models (v0) 0.4.6+9386d8a74f
+			fabric-networking-api-v1: Fabric Networking API (v1) 3.1.2+78d798af4f
+			fabric-object-builder-api-v1: Fabric Object Builder API (v1) 13.0.7+78d798af4f
+			fabric-particles-v1: Fabric Particles (v1) 1.1.6+78d798af4f
+			fabric-recipe-api-v1: Fabric Recipe API (v1) 2.0.15+78d798af4f
+			fabric-registry-sync-v0: Fabric Registry Sync (v0) 4.0.13+78d798af4f
+			fabric-renderer-api-v1: Fabric Renderer API (v1) 3.2.3+78d798af4f
+			fabric-renderer-indigo: Fabric Renderer - Indigo 1.5.3+78d798af4f
+			fabric-renderer-registries-v1: Fabric Renderer Registries (v1) 3.2.50+df3654b34f
+			fabric-rendering-data-attachment-v1: Fabric Rendering Data Attachment (v1) 0.3.41+73761d2e4f
+			fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 3.0.32+78d798af4f
+			fabric-rendering-v0: Fabric Rendering (v0) 1.1.53+df3654b34f
+			fabric-rendering-v1: Fabric Rendering (v1) 3.0.12+78d798af4f
+			fabric-resource-conditions-api-v1: Fabric Resource Conditions API (v1) 2.3.13+78d798af4f
+			fabric-screen-api-v1: Fabric Screen API (v1) 2.0.16+78d798af4f
+			fabric-screen-handler-api-v1: Fabric Screen Handler API (v1) 1.3.50+78d798af4f
+			fabric-sound-api-v1: Fabric Sound API (v1) 1.0.16+78d798af4f
+			fabric-transfer-api-v1: Fabric Transfer API (v1) 4.0.6+78d798af4f
+			fabric-transitive-access-wideners-v1: Fabric Transitive Access Wideners (v1) 5.0.13+78d798af4f
+		fabric-language-kotlin: Fabric Language Kotlin 1.10.17+kotlin.1.9.22
+			org_jetbrains_kotlin_kotlin-reflect: kotlin-reflect 1.9.22
+			org_jetbrains_kotlin_kotlin-stdlib: kotlin-stdlib 1.9.22
+			org_jetbrains_kotlin_kotlin-stdlib-jdk7: kotlin-stdlib-jdk7 1.9.22
+			org_jetbrains_kotlin_kotlin-stdlib-jdk8: kotlin-stdlib-jdk8 1.9.22
+			org_jetbrains_kotlinx_atomicfu-jvm: atomicfu-jvm 0.23.1
+			org_jetbrains_kotlinx_kotlinx-coroutines-core-jvm: kotlinx-coroutines-core-jvm 1.7.3
+			org_jetbrains_kotlinx_kotlinx-coroutines-jdk8: kotlinx-coroutines-jdk8 1.7.3
+			org_jetbrains_kotlinx_kotlinx-datetime-jvm: kotlinx-datetime-jvm 0.5.0
+			org_jetbrains_kotlinx_kotlinx-serialization-cbor-jvm: kotlinx-serialization-cbor-jvm 1.6.2
+			org_jetbrains_kotlinx_kotlinx-serialization-core-jvm: kotlinx-serialization-core-jvm 1.6.2
+			org_jetbrains_kotlinx_kotlinx-serialization-json-jvm: kotlinx-serialization-json-jvm 1.6.2
+		fabricloader: Fabric Loader 0.15.3
+			mixinextras: MixinExtras 0.3.2
+		ferritecore: FerriteCore 6.0.3
+		fpsdisplay: FPS-Display 4.0.0+1.20.4
+		immediatelyfast: ImmediatelyFast 1.2.8+1.20.4
+			net_lenni0451_reflect: Reflect 1.3.1
+		indium: Indium 1.0.28+mc1.20.4
+		iris: Iris 1.6.14
+			io_github_douira_glsl-transformer: glsl-transformer 2.0.0-pre13
+			org_anarres_jcpp: jcpp 1.4.14
+			org_antlr_antlr4-runtime: antlr4-runtime 4.11.1
+		java: Java HotSpot(TM) 64-Bit Server VM 17
+		krypton: Krypton 0.2.4
+			com_velocitypowered_velocity-native: velocity-native 3.2.0-SNAPSHOT
+		lazydfu: LazyDFU 0.1.3
+		lithium: Lithium 0.12.1
+		minecraft: Minecraft 1.20.4
+		modmenu: Mod Menu 9.0.0
+		presencefootsteps: Presence Footsteps 1.10.1
+			kirin: Kirin UI 1.16.0+1.20.2
+		reeses-sodium-options: Reese's Sodium Options 1.7.0+mc1.20.2-build.97
+		sodium: Sodium 0.5.5
+		sodium-extra: Sodium Extra 0.5.3+mc1.20.2-build.114
+			caffeineconfig: CaffeineConfig 1.3.0+1.17
+			crowdin-translate: CrowdinTranslate 1.4+1.19.3
+		starlight: Starlight 1.1.3+fabric.f5dcd1a
+		yet_another_config_lib_v3: YetAnotherConfigLib 3.3.1+1.20.4
+			com_twelvemonkeys_common_common-image: common-image 3.10.0
+			com_twelvemonkeys_common_common-io: common-io 3.10.0
+			com_twelvemonkeys_common_common-lang: common-lang 3.10.0
+			com_twelvemonkeys_imageio_imageio-core: imageio-core 3.10.0
+			com_twelvemonkeys_imageio_imageio-metadata: imageio-metadata 3.10.0
+			com_twelvemonkeys_imageio_imageio-webp: imageio-webp 3.10.0
+			org_quiltmc_parsers_gson: gson 0.2.1
+			org_quiltmc_parsers_json: json 0.2.1
+	Loaded Shaderpack: (off)
+	Launched Version: 1.20.4
+	Launcher name: PrismLauncher
+	Backend library: LWJGL version 3.3.2-snapshot
+	Backend API: NVIDIA GeForce RTX 3060 Ti/PCIe/SSE2 GL version 3.2.0 NVIDIA 545.84, NVIDIA Corporation
+	Window size: 1920x1009
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: 
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fabric'
+	Universe: 400921fb54442d18
+	Type: Client (map_client.txt)
+	Graphics mode: fancy
+	Render Distance: 12/12 chunks
+	Resource Packs: fabric, presencefootsteps:default_sound_pack
+	Current Language: en_us
+	Locale: en_US
+	CPU: 12x 12th Gen Intel(R) Core(TM) i5-12400

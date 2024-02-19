@@ -1,0 +1,15 @@
++---------------------------+-------+---------+-----------+
+| Material List for schematic 'Unnamed' (1 of 1 regions)  |
++---------------------------+-------+---------+-----------+
+| Item                      | Total | Missing | Available |
++---------------------------+-------+---------+-----------+
+| Polished Deepslate Slab   |   916 |     916 |         0 |
+| Polished Deepslate        |   698 |     698 |         0 |
+| Spruce Trapdoor           |   157 |     157 |         0 |
+| Polished Deepslate Stairs |    10 |      10 |         0 |
+| Chest                     |     4 |       4 |         0 |
+| Hopper                    |     4 |       4 |         0 |
+| Ladder                    |     4 |       4 |         0 |
++---------------------------+-------+---------+-----------+
+| Item                      | Total | Missing | Available |
++---------------------------+-------+---------+-----------+

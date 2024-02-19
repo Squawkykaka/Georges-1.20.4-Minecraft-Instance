@@ -1,0 +1,120 @@
+{
+  "selections": {
+    "mode": "SIMPLE"
+  },
+  "placements": {
+    "placements": [
+      {
+        "schematic": "C:\\Users\\squawk\\AppData\\Roaming\\PrismLauncher\\instances\\1.20.4\\.minecraft\\schematics\\Cannons\\Orbital Strike 4.3.litematic",
+        "name": "Orbital Strike 4.0",
+        "origin": [
+          320,
+          179,
+          -272
+        ],
+        "rotation": "NONE",
+        "mirror": "NONE",
+        "ignore_entities": false,
+        "enabled": false,
+        "enable_render": true,
+        "render_enclosing_box": false,
+        "locked": false,
+        "locked_coords": 0,
+        "bb_color": 16757504,
+        "verifier_type": "all",
+        "placements": [
+          {
+            "name": "Orbital Strike 2.0",
+            "placement": {
+              "pos": [
+                15,
+                -8,
+                15
+              ],
+              "name": "Orbital Strike 2.0",
+              "rotation": "NONE",
+              "mirror": "NONE",
+              "locked_coords": 0,
+              "enabled": true,
+              "rendering_enabled": true,
+              "ignore_entities": false
+            }
+          },
+          {
+            "name": "Chunk Loader 2",
+            "placement": {
+              "pos": [
+                36,
+                19,
+                -16
+              ],
+              "name": "Chunk Loader 2",
+              "rotation": "NONE",
+              "mirror": "NONE",
+              "locked_coords": 0,
+              "enabled": true,
+              "rendering_enabled": true,
+              "ignore_entities": false
+            }
+          },
+          {
+            "name": "Chunk Loader 1",
+            "placement": {
+              "pos": [
+                -21,
+                19,
+                36
+              ],
+              "name": "Chunk Loader 1",
+              "rotation": "NONE",
+              "mirror": "NONE",
+              "locked_coords": 0,
+              "enabled": true,
+              "rendering_enabled": true,
+              "ignore_entities": false
+            }
+          }
+        ]
+      }
+    ],
+    "selected": 0,
+    "origin_selected": true
+  },
+  "schematic_projects_manager": {},
+  "operation_mode": "PASTE_SCHEMATIC",
+  "render_range": {
+    "mode": "ALL",
+    "axis": "y",
+    "layer_single": 0,
+    "layer_above": 0,
+    "layer_below": 97,
+    "layer_range_min": 0,
+    "layer_range_max": 0,
+    "hotkey_range_min": false,
+    "hotkey_range_max": false
+  },
+  "area_simple": {
+    "name": "Unnamed",
+    "current": "Unnamed",
+    "boxes": [
+      {
+        "pos1": [
+          0,
+          0,
+          0
+        ],
+        "pos2": [
+          0,
+          0,
+          0
+        ],
+        "name": "Unnamed"
+      }
+    ]
+  },
+  "tool_mode_data": {
+    "delete": {
+      "use_placement": false
+    }
+  }
+}

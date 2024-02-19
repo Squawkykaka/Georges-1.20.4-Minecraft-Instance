@@ -1,0 +1,571 @@
+---- Minecraft Crash Report ----
+// Surprise! Haha. Well, this is awkward.
+
+Time: 2024-01-30 12:16:10
+Description: Initializing game
+
+java.lang.RuntimeException: Could not execute entrypoint stage 'main' due to errors, provided by 'axiom'!
+	at net.fabricmc.loader.impl.FabricLoaderImpl.lambda$invokeEntrypoints$2(FabricLoaderImpl.java:388)
+	at net.fabricmc.loader.impl.util.ExceptionUtil.gatherExceptions(ExceptionUtil.java:33)
+	at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:386)
+	at net.fabricmc.loader.impl.game.minecraft.Hooks.startClient(Hooks.java:52)
+	at net.minecraft.class_310.<init>(class_310.java:487)
+	at net.minecraft.client.main.Main.main(Main.java:223)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:470)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at org.prismlauncher.launcher.impl.StandardLauncher.launch(StandardLauncher.java:87)
+	at org.prismlauncher.EntryPoint.listen(EntryPoint.java:130)
+	at org.prismlauncher.EntryPoint.main(EntryPoint.java:70)
+	Suppressed: java.lang.NoClassDefFoundError: Could not initialize class net.minecraft.class_2539
+		at net.fabricmc.fabric.impl.networking.server.ServerNetworkingImpl.<clinit>(ServerNetworkingImpl.java:42)
+		at net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking.registerGlobalReceiver(ServerPlayNetworking.java:90)
+		at chunkdebug.ChunkDebugServer.onInitialize(ChunkDebugServer.java:23)
+		at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:384)
+		... 9 more
+	Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: Mixin transformation of net.minecraft.class_2797 failed [in thread "Render thread"]
+		at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:427)
+		at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.tryLoadClass(KnotClassDelegate.java:323)
+		at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.loadClass(KnotClassDelegate.java:218)
+		at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:119)
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+		at net.minecraft.class_2539.<clinit>(class_2539.java:359)
+		at net.fabricmc.fabric.impl.networking.client.ClientNetworkingImpl.<clinit>(ClientNetworkingImpl.java:57)
+		at net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking.registerGlobalReceiver(ClientPlayNetworking.java:79)
+		at com.moulberry.axiom.packets.AxiomClientboundAckWorldProperties.register(AxiomClientboundAckWorldProperties.java:43)
+		at com.moulberry.axiom.Axiom.onInitialize(Axiom.java:122)
+		... 10 more
+	Suppressed: java.lang.NoClassDefFoundError: Could not initialize class net.fabricmc.fabric.impl.networking.client.ClientNetworkingImpl
+		at net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking.registerGlobalReceiver(ClientPlayNetworking.java:79)
+		at me.senseiwells.essentialclient.utils.network.NetworkHandler.<init>(NetworkHandler.java:19)
+		at me.senseiwells.essentialclient.feature.chunkdebug.ChunkClientNetworkHandler.<init>(ChunkClientNetworkHandler.java:18)
+		at me.senseiwells.essentialclient.EssentialClient.<clinit>(EssentialClient.java:46)
+		at java.base/java.lang.Class.forName0(Native Method)
+		at java.base/java.lang.Class.forName(Class.java:467)
+		at net.fabricmc.loader.impl.util.DefaultLanguageAdapter.create(DefaultLanguageAdapter.java:50)
+		at net.fabricmc.loader.impl.entrypoint.EntrypointStorage$NewEntry.getOrCreate(EntrypointStorage.java:117)
+		at net.fabricmc.loader.impl.entrypoint.EntrypointContainerImpl.getEntrypoint(EntrypointContainerImpl.java:53)
+		at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:384)
+		... 9 more
+	Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError [in thread "Render thread"]
+		at net.fabricmc.fabric.impl.networking.client.ClientNetworkingImpl.<clinit>(ClientNetworkingImpl.java:57)
+		at net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking.registerGlobalReceiver(ClientPlayNetworking.java:79)
+		at com.moulberry.axiom.packets.AxiomClientboundAckWorldProperties.register(AxiomClientboundAckWorldProperties.java:43)
+		at com.moulberry.axiom.Axiom.onInitialize(Axiom.java:122)
+		... 10 more
+	Suppressed: java.lang.NoClassDefFoundError: Could not initialize class net.fabricmc.fabric.impl.networking.server.ServerNetworkingImpl
+		at net.fabricmc.fabric.api.networking.v1.ServerConfigurationNetworking.registerGlobalReceiver(ServerConfigurationNetworking.java:75)
+		at net.fabricmc.fabric.impl.networking.CommonPacketsImpl.init(CommonPacketsImpl.java:37)
+		at java.base/java.lang.invoke.MethodHandleProxies$1.invoke(MethodHandleProxies.java:198)
+		at jdk.proxy3/com.sun.proxy.jdk.proxy3.$Proxy42.onInitialize(Unknown Source)
+		at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:384)
+		... 9 more
+	Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.NoClassDefFoundError: Could not initialize class net.minecraft.class_2539 [in thread "Render thread"]
+		at net.fabricmc.fabric.impl.networking.server.ServerNetworkingImpl.<clinit>(ServerNetworkingImpl.java:42)
+		at net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking.registerGlobalReceiver(ServerPlayNetworking.java:90)
+		at chunkdebug.ChunkDebugServer.onInitialize(ChunkDebugServer.java:23)
+		... 10 more
+	Suppressed: java.lang.NoClassDefFoundError: Could not initialize class net.fabricmc.fabric.impl.networking.server.ServerNetworkingImpl
+		at net.fabricmc.fabric.api.networking.v1.ServerConfigurationNetworking.registerGlobalReceiver(ServerConfigurationNetworking.java:75)
+		at net.fabricmc.fabric.impl.recipe.ingredient.CustomIngredientSync.onInitialize(CustomIngredientSync.java:94)
+		at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:384)
+		... 9 more
+	Caused by: [CIRCULAR REFERENCE: java.lang.ExceptionInInitializerError: Exception java.lang.NoClassDefFoundError: Could not initialize class net.minecraft.class_2539 [in thread "Render thread"]]
+	Suppressed: java.lang.NoClassDefFoundError: Could not initialize class net.fabricmc.fabric.impl.networking.server.ServerNetworkingImpl
+		at net.fabricmc.fabric.api.networking.v1.ServerConfigurationNetworking.registerGlobalReceiver(ServerConfigurationNetworking.java:75)
+		at net.fabricmc.fabric.impl.registry.sync.FabricRegistryInit.onInitialize(FabricRegistryInit.java:34)
+		at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:384)
+		... 9 more
+	Caused by: [CIRCULAR REFERENCE: java.lang.ExceptionInInitializerError: Exception java.lang.NoClassDefFoundError: Could not initialize class net.minecraft.class_2539 [in thread "Render thread"]]
+	Suppressed: java.lang.NoClassDefFoundError: Could not initialize class net.fabricmc.fabric.impl.networking.server.ServerNetworkingImpl
+		at net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking.registerGlobalReceiver(ServerPlayNetworking.java:90)
+		at de.siphalor.mousewheelie.common.network.MWLogicalServerNetworking.setup(MWLogicalServerNetworking.java:48)
+		at de.siphalor.mousewheelie.MouseWheelie.onInitialize(MouseWheelie.java:39)
+		at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:384)
+		... 9 more
+	Caused by: [CIRCULAR REFERENCE: java.lang.ExceptionInInitializerError: Exception java.lang.NoClassDefFoundError: Could not initialize class net.minecraft.class_2539 [in thread "Render thread"]]
+	Suppressed: java.lang.NoClassDefFoundError: Could not initialize class net.fabricmc.fabric.impl.networking.server.ServerNetworkingImpl
+		at net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking.registerGlobalReceiver(ServerPlayNetworking.java:90)
+		at io.wispforest.owo.client.screens.ScreenInternals.init(ScreenInternals.java:20)
+		at io.wispforest.owo.Owo.onInitialize(Owo.java:53)
+		at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:384)
+		... 9 more
+	Caused by: [CIRCULAR REFERENCE: java.lang.ExceptionInInitializerError: Exception java.lang.NoClassDefFoundError: Could not initialize class net.minecraft.class_2539 [in thread "Render thread"]]
+	Suppressed: java.lang.NoClassDefFoundError: Could not initialize class net.fabricmc.fabric.impl.networking.server.ServerNetworkingImpl
+		at net.fabricmc.fabric.api.networking.v1.ServerConfigurationNetworking.registerGlobalReceiver(ServerConfigurationNetworking.java:92)
+		at de.siphalor.tweed4.Tweed.onInitialize(Tweed.java:86)
+		at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:384)
+		... 9 more
+	Caused by: [CIRCULAR REFERENCE: java.lang.ExceptionInInitializerError: Exception java.lang.NoClassDefFoundError: Could not initialize class net.minecraft.class_2539 [in thread "Render thread"]]
+	Suppressed: java.lang.NoClassDefFoundError: Could not initialize class net.fabricmc.fabric.impl.networking.server.ServerNetworkingImpl
+		at net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking.registerGlobalReceiver(ServerPlayNetworking.java:90)
+		at de.maxhenkel.voicechat.net.FabricNetManager.registerReceiver(FabricNetManager.java:36)
+		at de.maxhenkel.voicechat.net.NetManager.init(NetManager.java:28)
+		at de.maxhenkel.voicechat.Voicechat.initialize(Voicechat.java:37)
+		at de.maxhenkel.voicechat.FabricVoicechatMod.onInitialize(FabricVoicechatMod.java:10)
+		at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:384)
+		... 9 more
+	Caused by: [CIRCULAR REFERENCE: java.lang.ExceptionInInitializerError: Exception java.lang.NoClassDefFoundError: Could not initialize class net.minecraft.class_2539 [in thread "Render thread"]]
+	Suppressed: java.lang.NoClassDefFoundError: Could not initialize class net.fabricmc.fabric.impl.networking.server.ServerNetworkingImpl
+		at net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking.registerGlobalReceiver(ServerPlayNetworking.java:107)
+		at red.jackf.whereisit.WhereIsIt.onInitialize(WhereIsIt.java:38)
+		at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:384)
+		... 9 more
+	Caused by: [CIRCULAR REFERENCE: java.lang.ExceptionInInitializerError: Exception java.lang.NoClassDefFoundError: Could not initialize class net.minecraft.class_2539 [in thread "Render thread"]]
+	Suppressed: java.lang.NoClassDefFoundError: Could not initialize class net.fabricmc.fabric.impl.networking.server.ServerNetworkingImpl
+		at net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking.registerGlobalReceiver(ServerPlayNetworking.java:90)
+		at com.sk89q.worldedit.fabric.net.handler.WECUIPacketHandler.init(WECUIPacketHandler.java:38)
+		at com.sk89q.worldedit.fabric.FabricWorldEdit.onInitialize(FabricWorldEdit.java:159)
+		at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:384)
+		... 9 more
+	Caused by: [CIRCULAR REFERENCE: java.lang.ExceptionInInitializerError: Exception java.lang.NoClassDefFoundError: Could not initialize class net.minecraft.class_2539 [in thread "Render thread"]]
+	Suppressed: java.lang.NoClassDefFoundError: Could not initialize class net.fabricmc.fabric.impl.networking.client.ClientNetworkingImpl
+		at net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking.registerGlobalReceiver(ClientPlayNetworking.java:79)
+		at org.enginehub.worldeditcui.fabric.CUINetworking.subscribeToCuiPacket(CUINetworking.java:49)
+		at org.enginehub.worldeditcui.fabric.FabricModWorldEditCUI.onInitialize(FabricModWorldEditCUI.java:89)
+		at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:384)
+		... 9 more
+	Caused by: [CIRCULAR REFERENCE: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError [in thread "Render thread"]]
+Caused by: java.lang.ExceptionInInitializerError
+	at net.fabricmc.fabric.impl.networking.client.ClientNetworkingImpl.<clinit>(ClientNetworkingImpl.java:57)
+	at net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking.registerGlobalReceiver(ClientPlayNetworking.java:79)
+	at com.moulberry.axiom.packets.AxiomClientboundAckWorldProperties.register(AxiomClientboundAckWorldProperties.java:43)
+	at com.moulberry.axiom.Axiom.onInitialize(Axiom.java:122)
+	at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:384)
+	... 9 more
+Caused by: java.lang.RuntimeException: Mixin transformation of net.minecraft.class_2797 failed
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:427)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.tryLoadClass(KnotClassDelegate.java:323)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.loadClass(KnotClassDelegate.java:218)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:119)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at net.minecraft.class_2539.<clinit>(class_2539.java:359)
+	... 14 more
+Caused by: org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:392)
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:234)
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClassBytes(MixinTransformer.java:202)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:422)
+	... 19 more
+Caused by: org.spongepowered.asm.mixin.injection.throwables.InjectionError: Critical injection failure: Constant modifier method modifyChatLength(I)I in viafabricplus.mixins.json:fixes.minecraft.network.MixinChatMessageC2SPacket from mod viafabricplus failed injection check, (0/1) succeeded. Scanned 1 target(s). Using refmap viafabricplus-refmap.json
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.postInject(InjectionInfo.java:468)
+	at org.spongepowered.asm.mixin.transformer.MixinTargetContext.applyInjections(MixinTargetContext.java:1384)
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyInjections(MixinApplicatorStandard.java:1062)
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyMixin(MixinApplicatorStandard.java:402)
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.apply(MixinApplicatorStandard.java:327)
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.apply(TargetClassContext.java:421)
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:403)
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:363)
+	... 22 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at net.fabricmc.loader.impl.FabricLoaderImpl.lambda$invokeEntrypoints$2(FabricLoaderImpl.java:388)
+	at net.fabricmc.loader.impl.util.ExceptionUtil.gatherExceptions(ExceptionUtil.java:33)
+	at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:386)
+	at net.fabricmc.loader.impl.game.minecraft.Hooks.startClient(Hooks.java:52)
+	at net.minecraft.class_310.<init>(class_310.java:487)
+
+-- Initialization --
+Details:
+	Modules: 
+		ADVAPI32.dll:Advanced Windows 32 Base API:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		COMCTL32.dll:User Experience Controls Library:6.10 (WinBuild.160101.0800):Microsoft Corporation
+		CRYPT32.dll:Crypto API32:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		CRYPTBASE.dll:Base cryptographic API DLL:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		CRYPTSP.dll:Cryptographic Service Provider API:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		DBGHELP.DLL:Windows Image Helper:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		DNSAPI.dll:DNS Client API DLL:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		GDI32.dll:GDI Client DLL:10.0.22621.3085 (WinBuild.160101.0800):Microsoft Corporation
+		IMM32.DLL:Multi-User Windows IMM32 API Client DLL:10.0.22621.2792 (WinBuild.160101.0800):Microsoft Corporation
+		IPHLPAPI.DLL:IP Helper API:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		KERNEL32.DLL:Windows NT BASE API Client DLL:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		KERNELBASE.dll:Windows NT BASE API Client DLL:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		MSCTF.dll:MSCTF Server DLL:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		MpOav.dll:IOfficeAntiVirus Module:4.18.23110.3 (9ebb3643d539a6fc4659898b1df3124d5da4c0a9):Microsoft Corporation
+		NSI.dll:NSI User-mode interface DLL:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		NTASN1.dll:Microsoft ASN.1 API:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		OLEAUT32.dll:OLEAUT32.DLL:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		PSAPI.DLL:Process Status Helper:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		Pdh.dll:Windows Performance Data Helper DLL:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		RPCRT4.dll:Remote Procedure Call Runtime:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		SHCORE.dll:SHCORE:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		SHELL32.dll:Windows Shell Common Dll:10.0.22621.2792 (WinBuild.160101.0800):Microsoft Corporation
+		USER32.dll:Multi-User Windows USER API Client DLL:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		USERENV.dll:Userenv:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		VCRUNTIME140.dll:Microsoft® C Runtime Library:14.31.31103.0:Microsoft Corporation
+		VERSION.dll:Version Checking and File Installation Libraries:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		WINHTTP.dll:Windows HTTP Services:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		WINMM.dll:MCI API DLL:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		WS2_32.dll:Windows Socket 2.0 32-Bit DLL:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		WSOCK32.dll:Windows Socket 32-Bit DLL:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		amsi.dll:Anti-Malware Scan Interface:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		apphelp.dll:Application Compatibility Client Library:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		awt.dll:Java(TM) Platform SE binary:17.0.9.0:Oracle Corporation
+		bcrypt.dll:Windows Cryptographic Primitives Library:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		bcryptPrimitives.dll:Windows Cryptographic Primitives Library:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		clbcatq.dll:COM+ Configuration Catalog:2001.12.10941.16384 (WinBuild.160101.0800):Microsoft Corporation
+		combase.dll:Microsoft COM for Windows:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		dbgcore.DLL:Windows Core Debugging Helpers:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		dhcpcsvc.DLL:DHCP Client Service:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		dhcpcsvc6.DLL:DHCPv6 Client:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		fastprox.dll:WMI Custom Marshaller:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		fwpuclnt.dll:FWP/IPsec User-Mode API:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		gdi32full.dll:GDI Client DLL:10.0.22621.3085 (WinBuild.160101.0800):Microsoft Corporation
+		glfw.dll:GLFW 3.4.0 DLL:3.4.0:GLFW
+		iertutil.dll:Run time utility for Internet Explorer:11.00.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		imgui-java64.dll
+		java.dll:Java(TM) Platform SE binary:17.0.9.0:Oracle Corporation
+		javaw.exe:Java(TM) Platform SE binary:17.0.9.0:Oracle Corporation
+		jemalloc.dll
+		jimage.dll:Java(TM) Platform SE binary:17.0.9.0:Oracle Corporation
+		jli.dll:Java(TM) Platform SE binary:17.0.9.0:Oracle Corporation
+		jna6036817724739691416.dll:JNA native library:6.1.6:Java(TM) Native Access (JNA)
+		jsvml.dll:Java(TM) Platform SE binary:17.0.9.0:Oracle Corporation
+		jvm.dll:Java HotSpot(TM) 64-Bit server VM:17.0.9.0:Oracle Corporation
+		kernel.appcore.dll:AppModel API Host:10.0.22621.2715 (WinBuild.160101.0800):Microsoft Corporation
+		lwjgl.dll
+		management.dll:Java(TM) Platform SE binary:17.0.9.0:Oracle Corporation
+		management_ext.dll:Java(TM) Platform SE binary:17.0.9.0:Oracle Corporation
+		mdnsNSP.dll:Bonjour Namespace Provider:3,1,0,1:Apple Inc.
+		msvcp140.dll:Microsoft® C Runtime Library:14.31.31103.0:Microsoft Corporation
+		msvcp_win.dll:Microsoft® C Runtime Library:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		msvcrt.dll:Windows NT CRT DLL:7.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		mswsock.dll:Microsoft Windows Sockets 2.0 Service Provider:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		napinsp.dll:E-mail Naming Shim Provider:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		ncrypt.dll:Windows NCrypt Router:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		net.dll:Java(TM) Platform SE binary:17.0.9.0:Oracle Corporation
+		netutils.dll:Net Win32 API Helpers DLL:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		nio.dll:Java(TM) Platform SE binary:17.0.9.0:Oracle Corporation
+		nlansp_c.dll:NLA Namespace Service Provider DLL:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		ntdll.dll:NT Layer DLL:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		ntmarta.dll:Windows NT MARTA provider:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		ole32.dll:Microsoft OLE for Windows:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		perfos.dll:Windows System Performance Objects DLL:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		pfclient.dll:SysMain Client:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		pnrpnsp.dll:PNRP Name Space Provider:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		profapi.dll:User Profile Basic API:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		rasadhlp.dll:Remote Access AutoDial Helper:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		rsaenh.dll:Microsoft Enhanced Cryptographic Provider:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		sechost.dll:Host for SCM/SDDL/LSA Lookup APIs:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		shlwapi.dll:Shell Light-weight Utility Library:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		srvcli.dll:Server Service Client DLL:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		sunmscapi.dll:Java(TM) Platform SE binary:17.0.9.0:Oracle Corporation
+		ucrtbase.dll:Microsoft® C Runtime Library:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		urlmon.dll:OLE32 Extensions for Win32:11.00.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		uxtheme.dll:Microsoft UxTheme Library:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		vcruntime140_1.dll:Microsoft® C Runtime Library:14.31.31103.0:Microsoft Corporation
+		verify.dll:Java(TM) Platform SE binary:17.0.9.0:Oracle Corporation
+		wbemcomn.dll:WMI:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		wbemprox.dll:WMI:10.0.22621.3085 (WinBuild.160101.0800):Microsoft Corporation
+		wbemsvc.dll:WMI:10.0.22621.3085 (WinBuild.160101.0800):Microsoft Corporation
+		win32u.dll:Win32u:10.0.22621.3085 (WinBuild.160101.0800):Microsoft Corporation
+		windows.storage.dll:Microsoft WinRT Storage API:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		winrnr.dll:LDAP RnR Provider DLL:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		wintypes.dll:Windows Base Types DLL:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		wshbth.dll:Windows Sockets Helper DLL:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		wshunix.dll:AF_UNIX Winsock2 Helper DLL:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		zip.dll:Java(TM) Platform SE binary:17.0.9.0:Oracle Corporation
+Stacktrace:
+	at net.minecraft.client.main.Main.main(Main.java:223)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:470)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at org.prismlauncher.launcher.impl.StandardLauncher.launch(StandardLauncher.java:87)
+	at org.prismlauncher.EntryPoint.listen(EntryPoint.java:130)
+	at org.prismlauncher.EntryPoint.main(EntryPoint.java:70)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.20.4
+	Minecraft Version ID: 1.20.4
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 17.0.9, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 302859952 bytes (288 MiB) / 656408576 bytes (626 MiB) up to 4294967296 bytes (4096 MiB)
+	CPUs: 12
+	Processor Vendor: GenuineIntel
+	Processor Name: 12th Gen Intel(R) Core(TM) i5-12400
+	Identifier: Intel64 Family 6 Model 151 Stepping 5
+	Microarchitecture: Alder Lake
+	Frequency (GHz): 2.50
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: Parsec Virtual Display Adapter
+	Graphics card #0 vendor: Parsec Cloud, Inc.
+	Graphics card #0 VRAM (MB): 0.00
+	Graphics card #0 deviceId: unknown
+	Graphics card #0 versionInfo: DriverVersion=0.41.0.0
+	Graphics card #1 name: Intel(R) UHD Graphics 730
+	Graphics card #1 vendor: Intel Corporation (0x8086)
+	Graphics card #1 VRAM (MB): 1024.00
+	Graphics card #1 deviceId: 0x4692
+	Graphics card #1 versionInfo: DriverVersion=31.0.101.4577
+	Graphics card #2 name: NVIDIA GeForce RTX 3060 Ti
+	Graphics card #2 vendor: NVIDIA (0x10de)
+	Graphics card #2 VRAM (MB): 4095.00
+	Graphics card #2 deviceId: 0x2489
+	Graphics card #2 versionInfo: DriverVersion=31.0.15.5123
+	Memory slot #0 capacity (MB): 16384.00
+	Memory slot #0 clockSpeed (GHz): 2.67
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MB): 16384.00
+	Memory slot #1 clockSpeed (GHz): 2.67
+	Memory slot #1 type: DDR4
+	Virtual memory max (MB): 40476.28
+	Virtual memory used (MB): 20366.25
+	Swap memory total (MB): 7936.00
+	Swap memory used (MB): 155.25
+	JVM Flags: 3 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xms512m -Xmx4096m
+	Fabric Mods: 
+		appleskin: AppleSkin 2.5.1+mc1.20.3
+		architectury: Architectury 11.0.11
+		axiom: Axiom 2.3.1
+			com_moulberry_axiomclientapi_axiomclientapi_: axiomclientapi 1.0.0
+		betterf3: BetterF3 9.0.0
+		bettermounthud: Better Mount HUD 1.2.2
+		betterpingdisplay: Better Ping Display 1.1.1
+		betterstats: Better Statistics Screen 3.7.1+fabric-1.20.4
+			tcdcommons: TCD Commons API 3.7+fabric-1.20.4
+		bobby: Bobby 5.0.3
+			com_typesafe_config: config 1.4.2
+			io_leangen_geantyref_geantyref: geantyref 1.3.13
+			org_spongepowered_configurate-core: configurate-core 4.1.2
+			org_spongepowered_configurate-hocon: configurate-hocon 4.1.2
+		c2me: Concurrent Chunk Management Engine 0.2.0+alpha.11.40
+			c2me-base: Concurrent Chunk Management Engine (Base) 0.2.0+alpha.11.40
+			c2me-client-uncapvd: Concurrent Chunk Management Engine (Client/Uncap View Distance) 0.2.0+alpha.11.40
+			c2me-fixes-chunkio-threading-issues: Concurrent Chunk Management Engine (Fixes/Chunk IO/Threading Issues) 0.2.0+alpha.11.40
+			c2me-fixes-general-threading-issues: Concurrent Chunk Management Engine (Fixes/General/Threading Issues) 0.2.0+alpha.11.40
+			c2me-fixes-worldgen-threading-issues: Concurrent Chunk Management Engine (Fixes/WorldGen/Threading Issues) 0.2.0+alpha.11.40
+			c2me-fixes-worldgen-vanilla-bugs: Concurrent Chunk Management Engine (Fixes/WorldGen/Vanilla Bugs) 0.2.0+alpha.11.40
+			c2me-notickvd: Concurrent Chunk Management Engine (No Tick View Distance) 0.2.0+alpha.11.40
+			c2me-opts-allocs: Concurrent Chunk Management Engine (Optimizations/Memory Allocations) 0.2.0+alpha.11.40
+			c2me-opts-chunk-access: Concurrent Chunk Management Engine (Optimizations/Chunk Access) 0.2.0+alpha.11.40
+			c2me-opts-chunkio: Concurrent Chunk Management Engine (Optimizations/Chunk IO) 0.2.0+alpha.11.40
+			c2me-opts-math: Concurrent Chunk Management Engine (Optimizations/Math) 0.2.0+alpha.11.40
+			c2me-opts-scheduling: Concurrent Chunk Management Engine (Optimizations/Scheduling) 0.2.0+alpha.11.40
+			c2me-opts-worldgen-general: Concurrent Chunk Management Engine (Optimizations/General WorldGen) 0.2.0+alpha.11.40
+			c2me-opts-worldgen-vanilla: Concurrent Chunk Management Engine (Optimizations/Vanilla WorldGen) 0.2.0+alpha.11.40
+			c2me-rewrites-chunk-serializer: Concurrent Chunk Management Engine (Rewrites/Chunk Serializer) 0.2.0+alpha.11.40
+			c2me-rewrites-chunkio: Concurrent Chunk Management Engine (Rewrites/Chunk IO) 0.2.0+alpha.11.40
+			c2me-server-utils: Concurrent Chunk Management Engine (Server Utils) 0.2.0+alpha.11.40
+			c2me-threading-chunkio: Concurrent Chunk Management Engine (Threading/WorldGen) 0.2.0+alpha.11.40
+			c2me-threading-lighting: Concurrent Chunk Management Engine (Threading/Lighting) 0.2.0+alpha.11.40
+			c2me-threading-worldgen: Concurrent Chunk Management Engine (Threading/WorldGen) 0.2.0+alpha.11.40
+			com_electronwill_night-config_core: core 3.6.5
+			com_electronwill_night-config_toml: toml 3.6.5
+			com_ibm_async_asyncutil: asyncutil 0.1.0
+			net_objecthunter_exp4j: exp4j 0.4.8
+			org_threadly_threadly: threadly 7.0
+		carpet: Carpet Mod 1.4.128+v231205
+		carpet-tis-addition: Carpet TIS Addition 1.55.0
+			conditional-mixin: conditional mixin 0.4.1
+		chesttracker: Chest Tracker 2.2.1+1.20.4
+			whereisit: Where Is It 2.3.4+1.20.4
+				jackfredlib: JackFredLib 0.9.3+1.20.4
+					jackfredlib-base: JackFredLib: Base 1.3.2+1.20.4
+					jackfredlib-colour: JackFredLib: Colour 1.1.0+1.20.4
+					jackfredlib-extracommandsourcedata: JackFredLib: Extra Command Source Data 1.1.1+1.20.4
+					jackfredlib-gps: JackFredLib: GPS 1.0.7+1.20.4
+					jackfredlib-lying: JackFredLib: Lying 0.5.5+1.20.4
+					jackfredlib-toasts: JackFredLib: Toasts 1.1.0+1.20.4
+		chunkdebug: Chunk Debug 1.1.0
+		cloth-config: Cloth Config v13 13.0.121
+			cloth-basic-math: cloth-basic-math 0.6.1
+		continuity: Continuity 3.0.0-beta.4+1.20.2
+		controlling: Controlling 15.0.2
+		debugify: Debugify 1.20.4+1.0
+		dynamic_fps: Dynamic FPS 3.3.3
+		eatinganimationid: Eating Animation 1.20+1.9.5
+		elementa: Elementa 619
+		elytra-trims: Elytra Trims 2.0.0-beta.4
+			mixinsquared: MixinSquared 0.1.1
+		entity_model_features: Entity Model Features 1.2.3
+		entity_texture_features: Entity Texture Features 5.2.1
+			org_apache_httpcomponents_httpmime: httpmime 4.5.10
+		entityculling: EntityCulling 1.6.3.1
+		essential: Essential 1.3.0.2+ge922acc4a7
+		essential-client: Essential Client 1.4.1
+			com_github_senseiwells_arucas: Arucas 239610d1ce
+		essential-container: essential-container 1.0.0
+			essential-loader: essential-loader 1.2.1
+		extremesoundmuffler: Extreme sound muffler 3.44
+			fiber: fiber 0.23.0-2
+		fabric-api: Fabric API 0.95.3+1.20.4
+			fabric-api-base: Fabric API Base 0.4.36+78d798af4f
+			fabric-api-lookup-api-v1: Fabric API Lookup API (v1) 1.6.48+82b1bb3e4f
+			fabric-biome-api-v1: Fabric Biome API (v1) 13.0.16+78d798af4f
+			fabric-block-api-v1: Fabric Block API (v1) 1.0.16+3e2216cb4f
+			fabric-block-view-api-v2: Fabric BlockView API (v2) 1.0.4+78d798af4f
+			fabric-blockrenderlayer-v1: Fabric BlockRenderLayer Registration (v1) 1.1.46+78d798af4f
+			fabric-client-tags-api-v1: Fabric Client Tags 1.1.7+78d798af4f
+			fabric-command-api-v1: Fabric Command API (v1) 1.2.41+f71b366f4f
+			fabric-command-api-v2: Fabric Command API (v2) 2.2.20+78d798af4f
+			fabric-commands-v0: Fabric Commands (v0) 0.2.58+df3654b34f
+			fabric-containers-v0: Fabric Containers (v0) 0.1.86+df3654b34f
+			fabric-content-registries-v0: Fabric Content Registries (v0) 5.0.11+78d798af4f
+			fabric-convention-tags-v1: Fabric Convention Tags 1.5.10+78d798af4f
+			fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 0.2.23+78d798af4f
+			fabric-data-attachment-api-v1: Fabric Data Attachment API (v1) 1.0.1+25e1b4764f
+			fabric-data-generation-api-v1: Fabric Data Generation API (v1) 13.2.0+5c0133444f
+			fabric-dimensions-v1: Fabric Dimensions API (v1) 2.1.61+78d798af4f
+			fabric-entity-events-v1: Fabric Entity Events (v1) 1.6.0+44c0f8c64f
+			fabric-events-interaction-v0: Fabric Events Interaction (v0) 0.7.1+389931eb4f
+			fabric-events-lifecycle-v0: Fabric Events Lifecycle (v0) 0.2.73+df3654b34f
+			fabric-game-rule-api-v1: Fabric Game Rule API (v1) 1.0.46+78d798af4f
+			fabric-item-api-v1: Fabric Item API (v1) 2.2.0+d6f2b0844f
+			fabric-item-group-api-v1: Fabric Item Group API (v1) 4.0.22+78d798af4f
+			fabric-key-binding-api-v1: Fabric Key Binding API (v1) 1.0.41+78d798af4f
+			fabric-keybindings-v0: Fabric Key Bindings (v0) 0.2.39+df3654b34f
+			fabric-lifecycle-events-v1: Fabric Lifecycle Events (v1) 2.2.31+eabbae364f
+			fabric-loot-api-v2: Fabric Loot API (v2) 2.1.6+78d798af4f
+			fabric-message-api-v1: Fabric Message API (v1) 6.0.5+78d798af4f
+			fabric-mining-level-api-v1: Fabric Mining Level API (v1) 2.1.61+78d798af4f
+			fabric-model-loading-api-v1: Fabric Model Loading API (v1) 1.0.8+78d798af4f
+			fabric-models-v0: Fabric Models (v0) 0.4.7+9386d8a74f
+			fabric-networking-api-v1: Fabric Networking API (v1) 3.1.7+2e5ac5484f
+			fabric-object-builder-api-v1: Fabric Object Builder API (v1) 13.0.10+06274a474f
+			fabric-particles-v1: Fabric Particles (v1) 1.1.7+78d798af4f
+			fabric-recipe-api-v1: Fabric Recipe API (v1) 2.0.20+78d798af4f
+			fabric-registry-sync-v0: Fabric Registry Sync (v0) 4.0.18+78d798af4f
+			fabric-renderer-api-v1: Fabric Renderer API (v1) 3.2.4+78d798af4f
+			fabric-renderer-indigo: Fabric Renderer - Indigo 1.5.4+78d798af4f
+			fabric-renderer-registries-v1: Fabric Renderer Registries (v1) 3.2.52+df3654b34f
+			fabric-rendering-data-attachment-v1: Fabric Rendering Data Attachment (v1) 0.3.42+73761d2e4f
+			fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 3.0.33+78d798af4f
+			fabric-rendering-v0: Fabric Rendering (v0) 1.1.55+df3654b34f
+			fabric-rendering-v1: Fabric Rendering (v1) 3.1.0+0d29db764f
+			fabric-resource-conditions-api-v1: Fabric Resource Conditions API (v1) 2.3.14+78d798af4f
+			fabric-resource-loader-v0: Fabric Resource Loader (v0) 0.11.17+707e4d1b4f
+			fabric-screen-api-v1: Fabric Screen API (v1) 2.0.17+78d798af4f
+			fabric-screen-handler-api-v1: Fabric Screen Handler API (v1) 1.3.55+78d798af4f
+			fabric-sound-api-v1: Fabric Sound API (v1) 1.0.17+78d798af4f
+			fabric-transfer-api-v1: Fabric Transfer API (v1) 4.0.9+e84342304f
+			fabric-transitive-access-wideners-v1: Fabric Transitive Access Wideners (v1) 5.0.14+78d798af4f
+		fabric-language-kotlin: Fabric Language Kotlin 1.10.17+kotlin.1.9.22
+			org_jetbrains_kotlin_kotlin-reflect: kotlin-reflect 1.9.22
+			org_jetbrains_kotlin_kotlin-stdlib: kotlin-stdlib 1.9.22
+			org_jetbrains_kotlin_kotlin-stdlib-jdk7: kotlin-stdlib-jdk7 1.9.22
+			org_jetbrains_kotlin_kotlin-stdlib-jdk8: kotlin-stdlib-jdk8 1.9.22
+			org_jetbrains_kotlinx_atomicfu-jvm: atomicfu-jvm 0.23.1
+			org_jetbrains_kotlinx_kotlinx-coroutines-core-jvm: kotlinx-coroutines-core-jvm 1.7.3
+			org_jetbrains_kotlinx_kotlinx-coroutines-jdk8: kotlinx-coroutines-jdk8 1.7.3
+			org_jetbrains_kotlinx_kotlinx-datetime-jvm: kotlinx-datetime-jvm 0.5.0
+			org_jetbrains_kotlinx_kotlinx-serialization-cbor-jvm: kotlinx-serialization-cbor-jvm 1.6.2
+			org_jetbrains_kotlinx_kotlinx-serialization-core-jvm: kotlinx-serialization-core-jvm 1.6.2
+			org_jetbrains_kotlinx_kotlinx-serialization-json-jvm: kotlinx-serialization-json-jvm 1.6.2
+		fabricloader: Fabric Loader 0.15.3
+			mixinextras: MixinExtras 0.3.2
+		ferritecore: FerriteCore 6.0.3
+		fpsdisplay: FPS-Display 4.0.0+1.20.4
+		immediatelyfast: ImmediatelyFast 1.2.8+1.20.4
+			net_lenni0451_reflect: Reflect 1.3.1
+		indium: Indium 1.0.28+mc1.20.4
+		iris: Iris 1.6.14
+			io_github_douira_glsl-transformer: glsl-transformer 2.0.0-pre13
+			org_anarres_jcpp: jcpp 1.4.14
+			org_antlr_antlr4-runtime: antlr4-runtime 4.11.1
+		isometric-renders: Isometric Renders 0.4.6+1.20.3
+			worldmesher: Worldmesher 0.4.3+1.20.3
+		itemscroller: Item Scroller 0.22.0
+		java: Java HotSpot(TM) 64-Bit Server VM 17
+		krypton: Krypton 0.2.6
+			com_velocitypowered_velocity-native: velocity-native 3.2.0-SNAPSHOT
+		lazydfu: LazyDFU 0.1.3
+		librarian-trade-finder: Librarian Trade Finder 2.1.1
+		litematica: Litematica 0.17.0
+		lithium: Lithium 0.12.1
+		malilib: MaLiLib 0.18.0
+		minecraft: Minecraft 1.20.4
+		minihud: MiniHUD 0.30.0
+		modmenu: Mod Menu 9.0.0
+		mousewheelie: Mouse Wheelie 1.13.3+mc1.20.4
+			amecsapi: Amecs API 1.5.6+mc1.20.2
+			coat: Coat 1.0.0-beta.22+mc1.20.4
+			tweed4_annotated: tweed4_annotated 1.3.1+mc1.20.2
+			tweed4_base: tweed4_base 1.7.1+mc1.20.2
+			tweed4_data: tweed4_data 1.2.1+mc1.20.2
+			tweed4_data_hjson: tweed4_data_hjson 1.1.1+mc1.20.2
+			tweed4_tailor_coat: tweed4_tailor_coat 1.1.3+mc1.20.2
+			tweed4_tailor_lang_json_descriptions: tweed4_tailor_lang_json_descriptions 1.1.0+mc1.20.2
+			tweed4_tailor_screen: tweed4_tailor_screen 1.1.4+mc1.20.2
+		nvidium: Nvidium 0.2.5-beta
+		org_jetbrains_annotations: annotations 13.0
+		owo: oωo 0.12.3+1.20.3
+			blue_endless_jankson: jankson 1.2.2
+		pistorder: Pistorder 1.6.3
+		presencefootsteps: Presence Footsteps 1.11.1
+			kirin: Kirin UI 1.17.0+1.20.4
+		preventer: Preventer 1.1.0
+		replaymod: Replay Mod 1.20.4-2.6.14
+		searchables: Searchables 1.0.3
+		skinlayers3d: 3d-Skin-Layers 1.6.2
+		sodium: Sodium 0.5.5
+		sound_physics_remastered: Sound Physics Remastered 1.20.4-1.3.1
+		starlight: Starlight 1.1.3+fabric.f5dcd1a
+		tweakermore: TweakerMore 3.16.0
+		tweakeroo: Tweakeroo 0.19.1
+		universalcraft: UniversalCraft 323
+		viafabricplus: ViaFabricPlus 3.0.6
+			com_google_code_findbugs_jsr305: jsr305 3.0.2
+			com_vdurmont_semver4j: semver4j 3.1.0
+			com_viaversion_viabackwards-common: viabackwards-common 4.10.0-23w51b-SNAPSHOT
+			com_viaversion_viaversion-common: viaversion-common 4.10.0-23w51b-SNAPSHOT
+			de_florianmichael_classic4j: Classic4J 2.0.1
+			io_jsonwebtoken_jjwt-api: jjwt-api 0.12.3
+			io_jsonwebtoken_jjwt-gson: jjwt-gson 0.12.3
+			io_jsonwebtoken_jjwt-impl: jjwt-impl 0.12.3
+			net_jodah_expiringmap: expiringmap 0.5.10
+			net_lenni0451_mcping: MCPing 1.4.0
+			net_lenni0451_mcstructs-bedrock_forms: forms 1.2.0
+			net_lenni0451_mcstructs-bedrock_text: text 1.2.0
+			net_raphimc_minecraftauth: MinecraftAuth 3.1.0
+			net_raphimc_viaaprilfools: ViaAprilFools 2.0.11-SNAPSHOT
+			net_raphimc_viabedrock: ViaBedrock 0.0.4-SNAPSHOT
+			net_raphimc_vialegacy: ViaLegacy 2.2.22-SNAPSHOT
+			net_raphimc_vialoader: ViaLoader 2.2.13-SNAPSHOT
+			org_cloudburstmc_netty_netty-transport-raknet: netty-transport-raknet 1.0.0.CR1-SNAPSHOT
+			org_iq80_leveldb_leveldb: leveldb 0.12
+			org_iq80_leveldb_leveldb-api: leveldb-api 0.12
+			org_lz4_lz4-pure-java: lz4-pure-java 1.8.0
+			org_yaml_snakeyaml: snakeyaml 2.2
+		vigilance: Vigilance 295
+		voicechat: Simple Voice Chat 1.20.4-2.5.0
+		worldedit: WorldEdit 7.3.0-beta-03+d6d222e
+		worldeditcui: WorldEditCUI 1.20.3+01
+		xaerominimap: Xaero's Minimap 23.9.7
+		xaeros-map-chest-tracker-integration: Xaero's Map Chest Tracker Integration 2.0.1
+		xaeroworldmap: Xaero's World Map 1.37.7
+		yet_another_config_lib_v3: YetAnotherConfigLib 3.3.2+1.20.4
+			com_twelvemonkeys_common_common-image: common-image 3.10.0
+			com_twelvemonkeys_common_common-io: common-io 3.10.0
+			com_twelvemonkeys_common_common-lang: common-lang 3.10.0
+			com_twelvemonkeys_imageio_imageio-core: imageio-core 3.10.0
+			com_twelvemonkeys_imageio_imageio-metadata: imageio-metadata 3.10.0
+			com_twelvemonkeys_imageio_imageio-webp: imageio-webp 3.10.0
+			org_quiltmc_parsers_gson: gson 0.2.1
+			org_quiltmc_parsers_json: json 0.2.1
+		zoomify: Zoomify 2.13.0
+			com_akuleshov7_ktoml-core-jvm: ktoml-core-jvm 0.5.1
+			dev_isxander_settxi_settxi-core: settxi-core 2.10.6
+			dev_isxander_settxi_settxi-kotlinx-serialization: settxi-kotlinx-serialization 2.10.6
+	Launched Version: 1.20.4
+	Launcher name: PrismLauncher
+	Backend library: LWJGL version 3.3.2-snapshot
+	Backend API: Unknown
+	Window size: <not initialized>
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: <disabled>
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fabric'
+	Universe: 404
+	Type: Client (map_client.txt)
+	Locale: en_US
+	CPU: <unknown>

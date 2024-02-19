@@ -1,0 +1,13 @@
+filename = 'nvidium-0.2.5-beta.jar'
+name = 'Nvidium'
+side = 'client'
+
+[download]
+hash = '985edd825c7c771849a4f37f1ea3018b6fe5bd21234b40d6b48fab5ac2653b4a509ae87da4d786cfee42d86e5be5a4f26e6d0d1ed82a445a5f322ce43c7bf03d'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/SfMw2IZN/versions/UO1crPGk/nvidium-0.2.5-beta.jar'
+
+[update.modrinth]
+mod-id = 'SfMw2IZN'
+version = 'UO1crPGk'

@@ -1,0 +1,13 @@
+filename = 'iris-mc1.20.4-1.6.14.jar'
+name = 'Iris Shaders'
+side = 'client'
+
+[download]
+hash = 'a37762196bf78a1d05e848321bc02aa30df1fa97ba312d7177e52444fce06a2a75b2ae2338bdc9f51250d9008e2d931c9f03addca5c57551a64e65418806da49'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/YL57xq9U/versions/Xl7oywRL/iris-mc1.20.4-1.6.14.jar'
+
+[update.modrinth]
+mod-id = 'YL57xq9U'
+version = 'Xl7oywRL'

@@ -1,0 +1,13 @@
+filename = 'fabric-carpet-1.20.3-1.4.128+v231205.jar'
+name = 'Carpet'
+side = 'server'
+
+[download]
+hash = '6ca0bd328a76b7c3c10eb0253cb57eba8791087775467fbe2217c7f938c0064700bdca4cbf358e7f2f3427ae50a6d63f520f2b1a549cb36da1cc718812f86375'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/TQTTVgYE/versions/yYzR60Xd/fabric-carpet-1.20.3-1.4.128%2Bv231205.jar'
+
+[update.modrinth]
+mod-id = 'TQTTVgYE'
+version = 'yYzR60Xd'

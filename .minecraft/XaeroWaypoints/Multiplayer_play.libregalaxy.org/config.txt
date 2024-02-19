@@ -1,0 +1,16 @@
+//waypoints config options
+usingMultiworldDetection:false
+ignoreServerLevelId:false
+defaultMultiworldId:mw-1,0,2
+teleportationEnabled:true
+usingDefaultTeleportCommand:true
+sortType:NONE
+sortReversed:false
+
+//other config options
+ignoreHeightmaps:false
+
+//dimension types (DO NOT EDIT)
+dimensionType:minecraft$overworld:minecraft$overworld
+dimensionType:minecraft$91c3aae8-6fe4-4936-8a9d-238f326c2e18:minecraft$overworld
+dimensionType:minecraft$f6105691-f3e2-4523-a586-e9eeaaf3e1eb:minecraft$overworld

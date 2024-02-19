@@ -1,0 +1,13 @@
+filename = 'cmdkit-3.0.4-1.20.4.jar'
+name = 'Command Debug Service'
+side = 'client'
+
+[download]
+hash = '81062747d8cccb8ea188440a99634773b62063c0cf4325d30ad9ee4e044b8ad361cc4ce6dce3eef62f2b39a730321a80fcfb85eae2fd74c8d46b520c1e39f20e'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/9WacxUtO/versions/87coxgnR/cmdkit-3.0.4-1.20.4.jar'
+
+[update.modrinth]
+mod-id = '9WacxUtO'
+version = '87coxgnR'

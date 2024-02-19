@@ -1,0 +1,13 @@
+filename = 'owo-lib-0.12.3+1.20.3.jar'
+name = 'oωo (owo-lib)'
+side = 'both'
+
+[download]
+hash = '0d3834085e46175284c78f7161b87efed78b6d1ad409d0ccbe0c6628a9522cb90272eb3465ac04c8311938e1589ba92cfa21c6820e73e62840d24be973c7c424'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/ccKDOlHs/versions/HYGIKGSR/owo-lib-0.12.3%2B1.20.3.jar'
+
+[update.modrinth]
+mod-id = 'ccKDOlHs'
+version = 'HYGIKGSR'

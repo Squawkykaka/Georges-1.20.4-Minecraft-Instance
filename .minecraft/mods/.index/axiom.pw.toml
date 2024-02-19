@@ -1,0 +1,13 @@
+filename = 'Axiom-2.3.1-for-MC1.20.4.jar'
+name = 'Axiom'
+side = 'both'
+
+[download]
+hash = '592915c99a2112290d825704acca3bda211aa47530cbeb17c371863da274da251fa12a1cd595e8a6e299dd643fbd01e7892b0ed6309ed97591c3e1bae5ebb61a'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/N6n5dqoA/versions/Ltd8ZQ1T/Axiom-2.3.1-for-MC1.20.4.jar'
+
+[update.modrinth]
+mod-id = 'N6n5dqoA'
+version = 'Ltd8ZQ1T'

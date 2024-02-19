@@ -1,0 +1,13 @@
+filename = 'fpsdisplay-4.0.0+1.20.4.jar'
+name = 'FPS - Display'
+side = 'client'
+
+[download]
+hash = '5b88aa76ddd27099bf58185ba7647c52924fa941d789c0b0fdb2d8ff813314d0ae93cda1305b2975613ca23d76da0e6ff9af969b563dd0360a5113d7cbbca0ce'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/DIlqwRFH/versions/LgdccGhC/fpsdisplay-4.0.0%2B1.20.4.jar'
+
+[update.modrinth]
+mod-id = 'DIlqwRFH'
+version = 'LgdccGhC'

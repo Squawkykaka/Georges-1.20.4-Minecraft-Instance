@@ -1,0 +1,14 @@
+#
+#waypoint:name:initials:x:y:z:color:disabled:type:set:rotate_on_tp:tp_yaw:visibility_type:destination
+#
+waypoint:gui.xaero_deathpoint_old:D:1017:197:-434:0:false:2:gui.xaero_default:false:0:1:true
+waypoint:gui.xaero_deathpoint_old:D:814:108:-357:0:false:2:gui.xaero_default:false:0:1:true
+waypoint:Giant mega cave:G:713:-54:-469:2:false:0:gui.xaero_default:false:0:0:false
+waypoint:Oak Village:O:378:75:-376:5:false:0:gui.xaero_default:false:0:0:false
+waypoint:Home:H:828:138:-363:5:false:0:gui.xaero_default:false:0:0:false
+waypoint:Acacia Village:A:734:63:3001:4:false:0:gui.xaero_default:false:0:0:false
+waypoint:Desert Village:D:869:63:2357:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Witch Hut:8:844:70:-153:3:false:0:gui.xaero_default:false:0:0:false
+waypoint:Village:V:850:66:-334:9:true:0:gui.xaero_default:false:0:0:false
+waypoint:Hosue spot?:H:376:64:-581:8:true:0:gui.xaero_default:false:0:0:false
+waypoint:Aydin:A:360:-4:-487:6:true:0:gui.xaero_default:false:0:0:false

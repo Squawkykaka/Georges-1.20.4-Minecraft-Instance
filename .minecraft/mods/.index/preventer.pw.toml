@@ -1,0 +1,13 @@
+filename = '1.20.x-preventer-1.1.0.jar'
+name = 'Preventer'
+side = 'client'
+
+[download]
+hash = '193e0f26bc9b69469b3acd93c75008d7073438cbac6c6c0c148628780565d4f775bf8ff2ebbd9aadcd7b24572e23a02ef7f5daec326dfb5a443dcf030f638af7'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/RK0tTWG1/versions/LndPsYQq/1.20.x-preventer-1.1.0.jar'
+
+[update.modrinth]
+mod-id = 'RK0tTWG1'
+version = 'LndPsYQq'

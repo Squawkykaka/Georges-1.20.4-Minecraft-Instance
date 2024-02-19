@@ -1,0 +1,13 @@
+filename = 'reeses_sodium_options-1.7.1+mc1.20.4-build.100.jar'
+name = "Reese's Sodium Options"
+side = 'client'
+
+[download]
+hash = '251c68efb573bf6c8f49acd42ebe82862e76ab9da39446833d3604e4d38783c47f29057f994856e668e06dbed27e47c6df215641ad354ffb960d852485e8e281'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/Bh37bMuy/versions/Iukh1sNN/reeses_sodium_options-1.7.1%2Bmc1.20.4-build.100.jar'
+
+[update.modrinth]
+mod-id = 'Bh37bMuy'
+version = 'Iukh1sNN'

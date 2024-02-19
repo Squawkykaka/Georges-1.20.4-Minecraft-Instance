@@ -1,0 +1,13 @@
+filename = 'rrls-4.0.1+mc1.20.4-fabric.jar'
+name = 'Remove Reloading Screen'
+side = 'client'
+
+[download]
+hash = 'd6ac2f40c08af580569fabdb8c9036a98c64b14ef30501b0f5da9af82ae77de1bc81f8fd13aa0039827cd3a1f5a1de9b60cfebb2f8726a02f2fc4e57894f0055'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/ZP7xHXtw/versions/EzsoDheL/rrls-4.0.1%2Bmc1.20.4-fabric.jar'
+
+[update.modrinth]
+mod-id = 'ZP7xHXtw'
+version = 'EzsoDheL'

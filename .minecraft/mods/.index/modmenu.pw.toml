@@ -1,0 +1,13 @@
+filename = 'modmenu-9.0.0.jar'
+name = 'Mod Menu'
+side = 'client'
+
+[download]
+hash = '62ae3152d6dfd2745b95a6572f085bf8deb708d183a4234e6f72ae7b07f05a787454d4f289cee96d4e0f7efab026ed6073659d1aebb87530abeb7ddcfc0fe40b'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/mOgUt4GM/versions/sjtVVlsA/modmenu-9.0.0.jar'
+
+[update.modrinth]
+mod-id = 'mOgUt4GM'
+version = 'sjtVVlsA'

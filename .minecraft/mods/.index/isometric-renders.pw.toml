@@ -1,0 +1,13 @@
+filename = 'isometric-renders-0.4.6+1.20.3.jar'
+name = 'Isometric Renders'
+side = 'client'
+
+[download]
+hash = '35d9d45dc8bba29c31cf7f1caf588130c28920516a80f9c8434fbaceee13b5cc33641586a40de1c2230498c5f0cb0ceec72ed0df7ccddf81b445a53e4818aa12'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/M0aimenU/versions/jvHsIPLV/isometric-renders-0.4.6%2B1.20.3.jar'
+
+[update.modrinth]
+mod-id = 'M0aimenU'
+version = 'jvHsIPLV'

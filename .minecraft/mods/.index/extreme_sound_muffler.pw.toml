@@ -1,0 +1,13 @@
+filename = 'ExtremeSoundMuffler-3.44-fabric-1.20.4.jar'
+name = 'Extreme sound muffler'
+side = 'client'
+
+[download]
+hash = 'a65fc26d965d3c2d82ba95851dcadfe7fe9efe832ebde1adafc3a9828b1a6d6cbf1852fc4d7dc1695cb891492b8844f8f79aa0ea8f615bd90f08b07f3e3c6d8e'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/5IIKsxiL/versions/mKXuZUd4/ExtremeSoundMuffler-3.44-fabric-1.20.4.jar'
+
+[update.modrinth]
+mod-id = '5IIKsxiL'
+version = 'mKXuZUd4'
